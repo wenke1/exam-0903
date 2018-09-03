@@ -1,0 +1,1 @@
+$("#soso").on("input",function(){$.ajax({url:"/api/soso?content="+$("#soso").val(),dataType:"json",success:function(o){if(1===o.code){console.log(o.msg),""===$("#soso").val()&&$(".list").html("");var s="";o.msg.forEach(function(o){s+="<li>"+o+"</li>"}),$(".list").html(s)}}})});
